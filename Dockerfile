@@ -10,7 +10,7 @@ WORKDIR /opt/womginx
 RUN rm -rf .git && git init
 WORKDIR /opt/womginx/public
 RUN rm -rf wombat && git submodule add https://github.com/webrecorder/wombat
-WORKDIR /opt/womginx/public/wombat
+WORKDIR /opt/womginx/public/wombats
 # wombat's latest version (as of January 4th, 2022; commit 72db794) breaks websocket functionality.
 # Locking the version here temporarily until I can find a solution
 RUN git checkout 78813ad
